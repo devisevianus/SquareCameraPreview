@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/fl_camera"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/camera_preview_view"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.devis.squarecamerapreview.CustomImagePreviewV2
+            android:id="@+id/imgGuide"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/photo"
+            android:layout_alignTop="@+id/photo"
+            android:layout_alignStart="@+id/photo"
+            android:layout_alignEnd="@+id/photo"
+            android:layout_margin="14dp"
+            android:src="@drawable/gd_general"/>
+
+        <com.devis.squarecamerapreview.SquareImageViewV2
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:scaleType="centerCrop"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/black">
+
+        <ImageView
+            android:id="@+id/iv_camera_flash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/change_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
+
+
+        <ImageView
+            android:id="@+id/capture_image_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/btnSubmit"
+            android:visibility="visible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            tools:ignore="ContentDescription"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
